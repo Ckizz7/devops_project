@@ -1,20 +1,21 @@
-# Use the official Node.js image
+# Uses my official Node.js image
 FROM node:16
 
-# Set the working directory
+# Sets my working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+# Copies package.json and package-lock.json
 COPY package*.json ./
 
-# Install dependencies and verify jest
+# Install dependencies, including devDependencies
+ENV NODE_ENV=development
 RUN npm install && npm list jest
 
-# Copy the rest of the application code
+# This copies the rest of the application code
 COPY . .
 
 # Expose port 5000
 EXPOSE 5000
 
-# Start the application
+# Starts the app
 CMD ["node", "app.js"]
