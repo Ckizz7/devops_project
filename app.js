@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Serve static files from the "public" folder
+// This is where the static files are served from" 
 app.use(express.static(path.join(__dirname, 'public')));
 
 // REST API endpoint
