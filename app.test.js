@@ -1,3 +1,10 @@
+/*
+Name - Cardell
+
+File purpose - This file contains a test suite for an Express.js application using Jest and Supertest.
+The test suite includes a test for a REST API endpoint that returns a JSON object with a message.
+*/
+
 const request = require('supertest');
 const express = require('express');
 
